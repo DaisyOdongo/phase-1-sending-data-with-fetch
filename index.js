@@ -6,8 +6,12 @@ function submitData(name, email) {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(info),
+      body: JSON.stringify(info)
     })
+    // .then(response => {
+    //   console.log("Request complete! response:", response);
+    // })
+  
       .then((response) => response.json())
       .then((data) => {
         document.body.innerHTML = data.id;
